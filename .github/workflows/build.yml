@@ -33,17 +33,17 @@ jobs:
         run: west update
       - name: West Zephyr export
         run: west zephyr-export
-      - name: West Build (Tidbit Numpad)
-        run: west build -s zmk/app -b nice_nano -- -DSHIELD=tidbit -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
-      - name: Tidbit Numpad DTS File
+      - name: West Build (numpad)
+        run: west build -s zmk/app -b nice_nano -- -DSHIELD=numpad -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+      - name: numpad DTS File
         if: ${{ always() }}
         run: cat -n build/zephyr/nice_nano.dts.pre.tmp
-      - name: Tidbit Numpad Kconfig file
+      - name: numpad Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmk.uf2
-        run: cp build/zephyr/zmk.uf2 tidbit_nice_nano.uf2
-      - name: Archive (Tidbit Numpad)
+        run: cp build/zephyr/zmk.uf2 numpad_nice_nano.uf2
+      - name: Archive (numpad)
         uses: actions/upload-artifact@v2
         with:
           name: firmware
-          path: tidbit_nice_nano.uf2
+          path: numpad_nice_nano.uf2
