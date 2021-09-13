@@ -17,10 +17,10 @@
 // | 1 | 2 | 3 | - |
 // | 0 | . | = | + |
             bindings = <
-&kp SLASH &kp N7 &kp N8   &kp N9      
-&kp STAR  &kp N4 &kp N5   &kp N6      
+&kp SLASH &kp N9 &kp N8   &kp N7      
+&kp STAR  &kp N6 &kp N5   &kp N4      
 &kp MINUS &kp N3 &kp N2   &kp N1      
-&lt FN EQUAL  &kp DOT &kp N0  &kp PLUS 
+&KP PLUS  &lt FN EQUAL &kp DOT &kp N0 
             >;
         };
 
