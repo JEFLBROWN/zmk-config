@@ -33,7 +33,7 @@
             bindings = <
 &bootloader  &trans  &trans  &trans
 &trans       &trans  &trans  &trans
-&trans       &trans  &trans  &trans
+&kp BSPC     &trans  &trans  &trans
 &trans       &trans  &trans  &trans
             >;
 
